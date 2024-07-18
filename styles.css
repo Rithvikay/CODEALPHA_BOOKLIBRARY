@@ -1,0 +1,168 @@
+/* Define color variables */
+:root {
+  --primary-color: #102c57; /* Dark blue */
+  --secondary-color: #1679ab; /* Light blue */
+  --error-color: #ffb1b1; /* Light red */
+  --error-color-dark: #ffcbcb; /* Darker red */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Light gray background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #333; /* Dark gray text */
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+form input,
+form select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  min-width: calc(25% - 20px);
+  transition: all 0.3s ease;
+  color: #555; /* Dark gray text */
+}
+
+form input:focus,
+form select:focus {
+  border-color: var(--secondary-color); /* Light blue focus color */
+}
+
+form button {
+  flex-basis: 100%;
+  padding: 10px 20px;
+  background: var(--secondary-color); /* Light blue button background */
+  border: none;
+  color: #fff; /* White text */
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #0d5a85; /* Darker blue on hover */
+}
+
+form button .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  fill: #fff; /* White icon */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9; /* Light gray background for list items */
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+li .details {
+  display: flex;
+  gap: 10px;
+}
+
+li .details span {
+  display: inline-block;
+  font-weight: bold;
+}
+
+li button {
+  background: var(--error-color); /* Light red delete button */
+  border: none;
+  color: #fff; /* White text */
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li button:hover {
+  background: var(--error-color-dark); /* Darker red on hover */
+}
+
+li button .icon {
+  width: 16px;
+  height: 16px;
+  fill: #fff; /* White icon */
+}
+
+#search,
+#filter-category {
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  color: #555; /* Dark gray text */
+}
+
+#search:focus,
+#filter-category:focus {
+  border-color: var(--secondary-color); /* Light blue focus color */
+}
+
+.logo-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
